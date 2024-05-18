@@ -121,7 +121,7 @@ export default function GameBoard() {
     }
 
     return (
-        <div className="w-full p-1 bg-green-800 max-w-2xl rounded">
+        <div className="w-full p-1 bg-red-800 max-w-2xl rounded">
             <div
                 style={{
                     gridTemplateColumns: `repeat(${board[0].length}, 1fr)`,

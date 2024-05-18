@@ -68,11 +68,11 @@ export default function Game() {
                 restartBoard={resetBoard}
             ></GameOverDialog>
 
-            <div className="w-full min-h-[100dvh] p-10 gap-3 border flex items-center justify-center bg-gradient-to-tr from-emerald-800 to-emerald-400">
+            <div className="w-full min-h-[100dvh] p-10 gap-3 border flex items-center justify-center bg-gradient-to-tr to-yellow-200 from-red-400">
                 <div className="w-full flex items-center justify-center flex-col md:flex-row md:items-start gap-3">
                     {board != null ?
                         <GameBoard />
-                    :   <div className="w-full p-1 bg-green-800 max-w-2xl rounded">
+                    :   <div className="w-full p-1 bg-red-800 max-w-2xl rounded">
                             <div
                                 style={{
                                     gridTemplateColumns: `repeat(${
@@ -112,7 +112,7 @@ export default function Game() {
 
                         <p className="text-center">
                             ¡Ayuda a{" "}
-                            <span className="text-green-600 font-bold">
+                            <span className="text-red-600 font-bold">
                                 Fresa
                             </span>{" "}
                             a despejar el humo de cigarro!
@@ -149,7 +149,7 @@ export default function Game() {
                             casilla para poner una bandera, para ayudarte a
                             recordar donde crees que haya drogas.
                         </p>
-                        <p className="font-black text-red-700 text-xl text-center mt-3">
+                        <p className="font-black text-red-600 text-xl text-center mt-3">
                             ¡Si te drogas, te dañas!
                         </p>
                         <form
@@ -187,6 +187,9 @@ export default function Game() {
                     </div>
                 </div>
             </div>
+            <footer>
+                Aezral
+            </footer>
         </>
     );
 }
