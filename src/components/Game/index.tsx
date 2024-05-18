@@ -1,5 +1,7 @@
 import { useEffect } from "react";
-import createBoard, { type BoardConfig } from "@/components/Game/util/createBoard";
+import createBoard, {
+    type BoardConfig,
+} from "@/components/Game/util/createBoard";
 import GameBoard, { type BoardVisualizeOptions } from "./Board";
 import WinDialog from "./WinDialog";
 import GameOverDialog from "./GameOverDialog";
@@ -51,24 +53,17 @@ export default function Game() {
         setGameOver,
         setGameOverBombType,
         setMultiplier,
-        setLastOpened
+        setLastOpened,
     } = useGameStore();
 
-    const {
-        setIsWinDialogOpen,
-        setIsLostDialogOpen,
-    } = useDialogStore();
+    const { setIsWinDialogOpen, setIsLostDialogOpen } = useDialogStore();
 
     return (
         <>
-            <WinDialog
-                restartBoard={resetBoard}
-            ></WinDialog>
-            <GameOverDialog
-                restartBoard={resetBoard}
-            ></GameOverDialog>
+            <WinDialog restartBoard={resetBoard}></WinDialog>
+            <GameOverDialog restartBoard={resetBoard}></GameOverDialog>
 
-            <div className="w-full min-h-[100dvh] p-10 gap-3 border flex items-center justify-center bg-gradient-to-tr to-yellow-200 from-red-400">
+            <div className="w-full min-h-[100dvh] p-10 gap-3  flex items-center justify-center">
                 <div className="w-full flex items-center justify-center flex-col md:flex-row md:items-start gap-3">
                     {board != null ?
                         <GameBoard />
@@ -187,8 +182,11 @@ export default function Game() {
                     </div>
                 </div>
             </div>
-            <footer>
-                Aezral
+            <footer className="p-3 text-center">
+                <p> Hecho por {" "}
+                    <a className="text-red-900 font-bold underline" href="https://aezral.vercel.app">Luis Baeza</a>, Iván
+                    Góngora, Ricardo Salgado y Esther Sansores
+                </p>{" "}
             </footer>
         </>
     );
