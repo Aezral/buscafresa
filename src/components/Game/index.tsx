@@ -184,7 +184,7 @@ export default function Game() {
             </div>
             <footer className="p-3 text-center">
                 <p> Hecho por {" "}
-                    <a className="text-red-900 font-bold underline" href="https://aezral.vercel.app">Luis Baeza</a>, Iván
+                    <a className="text-red-900 font-bold underline" href="https://www.aezral.me">Luis Baeza</a>, Iván
                     Góngora, Ricardo Salgado y Esther Sansores
                 </p>{" "}
             </footer>
